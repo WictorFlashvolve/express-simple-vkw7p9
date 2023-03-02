@@ -1,3 +1,8 @@
 {
-  "routes": [{ "handle": "src/routes/routes.js" }]
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/src/routes/routes.js"
+    }
+  ]
 }
