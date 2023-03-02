@@ -20,7 +20,7 @@ class ServiceController {
       console.log(payload);
 
       res.status(200).json({ messageOn: payload });
-    } catch (err) {
+    } catch (erro) {
       console.log(erro.message);
       res.status(400).json({ message: 'error try again or contact suport' });
     }
