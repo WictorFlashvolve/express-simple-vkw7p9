@@ -3,6 +3,9 @@ class ServiceController {
   static async index(req, res) {
     res.status(200).json({ message: 'welcome to webook api-code-chat' });
   }
+  static async dev(req, res) {
+    res.status(200).json({ message: 'route success' });
+  }
 
   static async webhook(req, res) {
     const body = req.body;
