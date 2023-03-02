@@ -10,9 +10,16 @@ class ServiceController {
   static async webhook(req, res) {
     const body = req.body;
     try {
-      console.log(body);
+      //  console.log(body);
 
-      res.status(200).json({ messageOn: body });
+      const payload = {
+        remoteJid: body.key.remoteJid,
+        message: body.message.extendedTextMessage.text,
+        timestamp: body.messageTimestamp,
+      };
+      console.log(payload);
+
+      res.status(200).json({ messageOn: payload });
     } catch (err) {
       console.log(erro.message);
       res.status(400).json({ message: 'error try again or contact suport' });
